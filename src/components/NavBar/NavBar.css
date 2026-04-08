@@ -1,0 +1,112 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.nav-right a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+  color: whitesmoke;
+}
+
+/* Active link */
+.nav-right a.active {
+  color: whitesmoke;
+  font-weight: 600;
+ 
+  padding-bottom: 4px;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #000814;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #003566;
+}
+
+.name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* RIGHT */
+.nav-right {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-right li {
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.resume-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #003566;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #00509d;
+}
+
+/* 🔥 RESPONSIVE (MOBILE) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .nav-right {
+    gap: 1rem;
+  }
+
+  .resume-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}

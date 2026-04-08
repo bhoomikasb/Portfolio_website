@@ -1,0 +1,38 @@
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #1f4e79;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.connect-links a {
+  text-decoration: none;
+  background: white;
+  color: #1f4e79;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.connect-links a:hover {
+  background: #dbe9f4;
+  transform: translateY(-3px);
+}

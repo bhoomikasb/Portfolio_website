@@ -1,0 +1,63 @@
+.skills {
+  padding: 80px 8%;
+  background-color: #b5d1f5;
+}
+
+/* Heading */
+.skills h2 {
+  font-size: 36px;
+  color: #0a4d8c;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid Layout */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Category Card */
+.skill-category {
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.skill-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Title */
+.skill-category h3 {
+  color: #0a4d8c;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Skills List */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Skill Badge */
+.skill-badge {
+  background-color: #dbeafe;
+  color: #0a4d8c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+/* Hover on badge */
+.skill-badge:hover {
+  background-color: #0a4d8c;
+  color: white;
+}
