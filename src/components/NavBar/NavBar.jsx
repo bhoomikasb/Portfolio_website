@@ -3,7 +3,8 @@ import profile from "./profile-photo.png";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [active, setActive] = useState("about"); // default active
+  const [active, setActive] = useState("about");
+  const [menuOpen, setMenuOpen] = useState(false); // ⭐ NEW
 
   return (
     <nav className="navbar">
@@ -13,13 +14,21 @@ const NavBar = () => {
         <span className="name">Bhoomika</span>
       </div>
 
+      {/* ⭐ HAMBURGER ICON */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+
       {/* RIGHT SIDE */}
-      <ul className="nav-right">
+      <ul className={`nav-right ${menuOpen ? "active" : ""}`}>
         <li>
           <a
             href="#about"
             className={active === "about" ? "active" : ""}
-            onClick={() => setActive("about")}
+            onClick={() => {
+              setActive("about");
+              setMenuOpen(false); // ⭐ close menu
+            }}
           >
             About
           </a>
@@ -30,7 +39,10 @@ const NavBar = () => {
             href="/Bhoomika_SB_python_developer.pdf"
             download
             className="resume-btn"
-            onClick={() => setActive("resume")}
+            onClick={() => {
+              setActive("resume");
+              setMenuOpen(false); // ⭐ close menu
+            }}
           >
             Download Resume
           </a>

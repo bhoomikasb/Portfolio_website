@@ -4,32 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-
-.nav-right a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-/* Hover effect */
-.nav-right a:hover {
-  color: whitesmoke;
-}
-
-/* Active link */
-.nav-right a.active {
-  color: whitesmoke;
-  font-weight: 600;
- 
-  padding-bottom: 4px;
-}
-
-
+/* NAVBAR */
 .navbar {
   width: 100%;
   height: 70px;
@@ -43,7 +23,7 @@ html {
   z-index: 100;
 }
 
-/* LEFT */
+/* LEFT SIDE */
 .nav-left {
   display: flex;
   align-items: center;
@@ -64,7 +44,7 @@ html {
   font-weight: 600;
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 .nav-right {
   list-style: none;
   display: flex;
@@ -78,6 +58,26 @@ html {
   font-size: 1rem;
 }
 
+.nav-right a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover */
+.nav-right a:hover {
+  color: #ffd60a;
+}
+
+/* Active link */
+.nav-right a.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ffd60a;
+  padding-bottom: 4px;
+}
+
+/* Resume Button */
 .resume-btn {
   text-decoration: none;
   color: white;
@@ -91,8 +91,20 @@ html {
   background-color: #00509d;
 }
 
-/* 🔥 RESPONSIVE (MOBILE) */
+/* ⭐ HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
 @media (max-width: 768px) {
+
   .navbar {
     padding: 0 1rem;
   }
@@ -101,12 +113,45 @@ html {
     font-size: 1rem;
   }
 
+  /* Show hamburger */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide menu initially */
   .nav-right {
-    gap: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #000814;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    display: none;
+    padding: 20px 0;
+  }
+
+  /* Show menu when active */
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-right li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-right a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
   }
 
   .resume-btn {
-    padding: 6px 10px;
-    font-size: 0.85rem;
+    padding: 8px 12px;
   }
 }
