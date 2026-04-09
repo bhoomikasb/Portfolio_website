@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import profile from "./profile-photo.png";
-import "./Navbar.css";
+import "./NavBar.css";
 
 const NavBar = () => {
   const [active, setActive] = useState("about"); // default active
